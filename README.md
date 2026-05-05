@@ -1,1 +1,1 @@
-# shopcloud-ms5-analytics
+Estado: Mock Athena implementado (pendiente integración AWS real)
