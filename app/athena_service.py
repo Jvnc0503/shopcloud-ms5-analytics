@@ -1,10 +1,12 @@
 import boto3
 import time
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-athena = boto3.client('athena', region_name='us-east-1')
-
-DATABASE = "shopcloud_db"
-OUTPUT = "s3://shopcloud-bucket/athena-results/"
+athena = boto3.client('athena', region_name=os.getenv("AWS_REGION"))
+DATABASE = os.getenv("ATHENA_DATABASE")
+OUTPUT = os.getenv("ATHENA_OUTPUT")
 
 def run_query(sql: str):
     try:
