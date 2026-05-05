@@ -9,6 +9,8 @@ DATABASE = os.getenv("ATHENA_DATABASE")
 OUTPUT = os.getenv("ATHENA_OUTPUT")
 
 def run_query(sql: str):
+    if not DATABASE or not OUTPUT:
+        raise Exception("Faltan variables de entorno AWS (ATHENA_DATABASE o ATHENA_OUTPUT)")
     try:
         response = athena.start_query_execution(
             QueryString=sql,
