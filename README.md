@@ -1,4 +1,4 @@
-MS5 - Analytics Service
+# MS5 - Analytics Service 
 
 Microservicio de analítica desarrollado con FastAPI para el proyecto ShopCloud. Proporciona endpoints para consultas analíticas sobre datos almacenados en AWS Athena.
 
@@ -64,7 +64,6 @@ http://3.83.210.43:8005/docs
 * ✅ Microservicio desplegado en EC2
 * ✅ Endpoints funcionales
 * ✅ Integración con Athena configurada mediante credenciales AWS
-* ⚠️ Requiere credenciales válidas para ejecutar queries reales
 
 ⸻
 
