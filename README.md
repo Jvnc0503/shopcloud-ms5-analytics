@@ -2,6 +2,7 @@
 
 Microservicio de analítica desarrollado con FastAPI para el proyecto ShopCloud. Proporciona endpoints para consultas analíticas sobre datos almacenados en AWS Athena.
 
+
 ### 🚀 Funcionalidades
 
 El servicio expone los siguientes endpoints:
@@ -30,22 +31,30 @@ Cada endpoint ejecuta consultas SQL en Athena y retorna resultados en formato JS
 
 El servicio requiere variables de entorno configuradas en un archivo .env:
 
+
 AWS_ACCESS_KEY_ID=...
+
 AWS_SECRET_ACCESS_KEY=...
+
 AWS_SESSION_TOKEN=...
+
 AWS_REGION=...
+
 S3_OUTPUT=...
+
 DATABASE=...
 
 ⸻
 
 ### 🐳 Ejecución con Docker
 
-1. Construir la imagen:
+
+#### 1. Construir la imagen:
 
 docker build -t ms5-analytics .
 
-2. Ejecutar el contenedor:
+
+#### 2. Ejecutar el contenedor:
 
 docker run -d -p 8005:8005 --env-file .env ms5-analytics
 
