@@ -1,9 +1,3 @@
-Vas bien, ya estás en la parte final. No necesitas complicarlo más—solo deja el README claro y listo para evaluación.
-
-Aquí tienes un README directo que puedes copiar y pegar (ajústalo si quieres, pero ya está en nivel entrega):
-
-⸻
-
 MS5 - Analytics Service
 
 Microservicio de analítica desarrollado con FastAPI para el proyecto ShopCloud. Proporciona endpoints para consultas analíticas sobre datos almacenados en AWS Athena.
@@ -85,13 +79,3 @@ El archivo openapi.yml describe los endpoints del servicio y puede utilizarse pa
 * El acceso a Athena depende de credenciales válidas del equipo.
 * El servicio puede ejecutarse localmente o en la nube con distinta configuración de credenciales.
 
-⸻
-
-Listo. Esto ya cumple con entrega.
-
-⸻
-
-Siguiente paso (corto y concreto):
-👉 Haz git add ., git commit -m "final ms5", git push.
-
-No necesitas optimizar más. Ya estás en punto de cierre.
