@@ -1,0 +1,46 @@
+---
+openapi: 3.1.0
+info:
+  title: MS5 Analytics
+  version: 0.1.0
+paths:
+  "/analytics/ventas-por-categoria":
+    get:
+      summary: Ventas Categoria
+      operationId: ventas_categoria_analytics_ventas_por_categoria_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  "/analytics/top-productos":
+    get:
+      summary: Top Productos
+      operationId: top_productos_analytics_top_productos_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  "/analytics/usuarios-activos":
+    get:
+      summary: Usuarios Activos
+      operationId: usuarios_activos_analytics_usuarios_activos_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  "/analytics/ingresos-por-mes":
+    get:
+      summary: Ingresos Mes
+      operationId: ingresos_mes_analytics_ingresos_por_mes_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
