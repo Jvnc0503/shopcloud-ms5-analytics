@@ -2,7 +2,7 @@
 
 Microservicio de analítica desarrollado con FastAPI para el proyecto ShopCloud. Proporciona endpoints para consultas analíticas sobre datos almacenados en AWS Athena.
 
-🚀 Funcionalidades
+### 🚀 Funcionalidades
 
 El servicio expone los siguientes endpoints:
 
@@ -15,7 +15,7 @@ Cada endpoint ejecuta consultas SQL en Athena y retorna resultados en formato JS
 
 ⸻
 
-🧱 Tecnologías utilizadas
+### 🧱 Tecnologías utilizadas
 
 * FastAPI
 * Uvicorn
@@ -26,7 +26,7 @@ Cada endpoint ejecuta consultas SQL en Athena y retorna resultados en formato JS
 
 ⸻
 
-⚙️ Configuración
+### ⚙️ Configuración
 
 El servicio requiere variables de entorno configuradas en un archivo .env:
 
@@ -39,7 +39,7 @@ DATABASE=...
 
 ⸻
 
-🐳 Ejecución con Docker
+### 🐳 Ejecución con Docker
 
 1. Construir la imagen:
 
@@ -51,7 +51,7 @@ docker run -d -p 8005:8005 --env-file .env ms5-analytics
 
 ⸻
 
-🌐 Acceso
+### 🌐 Acceso
 
 El servicio se encuentra desplegado en una instancia EC2 con Elastic IP:
 
@@ -59,7 +59,7 @@ http://3.83.210.43:8005/docs
 
 ⸻
 
-📊 Estado del servicio
+### 📊 Estado del servicio
 
 * ✅ Microservicio desplegado en EC2
 * ✅ Endpoints funcionales
@@ -67,13 +67,13 @@ http://3.83.210.43:8005/docs
 
 ⸻
 
-📄 OpenAPI
+### 📄 OpenAPI
 
 El archivo openapi.yml describe los endpoints del servicio y puede utilizarse para integración o documentación adicional.
 
 ⸻
 
-👥 Notas
+### 👥 Notas
 
 * El acceso a Athena depende de credenciales válidas del equipo.
 * El servicio puede ejecutarse localmente o en la nube con distinta configuración de credenciales.
