@@ -3,44 +3,116 @@ openapi: 3.1.0
 info:
   title: MS5 Analytics
   version: 0.1.0
+servers:
+  - url: /
+tags:
+  - name: analytics
+    description: Analytics endpoints backed by Athena
+  - name: health
+    description: Service health check
 paths:
+  "/":
+    get:
+      summary: Health check
+      operationId: health_check__get
+      tags:
+        - health
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthCheck"
   "/analytics/ventas-por-categoria":
     get:
       summary: Ventas Categoria
       operationId: ventas_categoria_analytics_ventas_por_categoria_get
+      tags:
+        - analytics
       responses:
         '200':
           description: Successful Response
           content:
             application/json:
-              schema: {}
+              schema:
+                $ref: "#/components/schemas/QueryResult"
   "/analytics/top-productos":
     get:
       summary: Top Productos
       operationId: top_productos_analytics_top_productos_get
+      tags:
+        - analytics
       responses:
         '200':
           description: Successful Response
           content:
             application/json:
-              schema: {}
+              schema:
+                $ref: "#/components/schemas/QueryResult"
   "/analytics/usuarios-activos":
     get:
       summary: Usuarios Activos
       operationId: usuarios_activos_analytics_usuarios_activos_get
+      tags:
+        - analytics
       responses:
         '200':
           description: Successful Response
           content:
             application/json:
-              schema: {}
+              schema:
+                $ref: "#/components/schemas/QueryResult"
   "/analytics/ingresos-por-mes":
     get:
       summary: Ingresos Mes
       operationId: ingresos_mes_analytics_ingresos_por_mes_get
+      tags:
+        - analytics
       responses:
         '200':
           description: Successful Response
           content:
             application/json:
-              schema: {}
+              schema:
+                $ref: "#/components/schemas/QueryResult"
+components:
+  schemas:
+    HealthCheck:
+      type: object
+      required:
+        - status
+        - service
+      properties:
+        status:
+          type: string
+          examples:
+            - ok
+        service:
+          type: string
+          examples:
+            - ms5-analytics
+    QueryResult:
+      type: object
+      required:
+        - status
+      properties:
+        status:
+          type: string
+          enum:
+            - success
+            - error
+            - timeout
+        query_id:
+          type: string
+        data:
+          type: array
+          description: Array of rows, each row is an array of string values
+          items:
+            type: array
+            items:
+              type: string
+        state:
+          type: string
+        message:
+          type: string

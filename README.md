@@ -7,12 +7,13 @@ Microservicio de analítica desarrollado con FastAPI para el proyecto ShopCloud.
 
 El servicio expone los siguientes endpoints:
 
+* /
 * /analytics/ventas-por-categoria
 * /analytics/top-productos
 * /analytics/usuarios-activos
 * /analytics/ingresos-por-mes
 
-Cada endpoint ejecuta consultas SQL en Athena y retorna resultados en formato JSON.
+Cada endpoint de analytics ejecuta consultas SQL en Athena y retorna resultados en formato JSON.
 
 ⸻
 
@@ -36,13 +37,11 @@ AWS_ACCESS_KEY_ID=...
 
 AWS_SECRET_ACCESS_KEY=...
 
-AWS_SESSION_TOKEN=...
-
 AWS_REGION=...
 
-S3_OUTPUT=...
+ATHENA_DATABASE=...
 
-DATABASE=...
+ATHENA_OUTPUT=...
 
 ⸻
 
@@ -79,6 +78,8 @@ http://3.83.210.43:8005/docs
 ### 📄 OpenAPI
 
 El archivo openapi.yml describe los endpoints del servicio y puede utilizarse para integración o documentación adicional.
+
+Los endpoints de analytics retornan un objeto con campos como status, query_id y data, segun el resultado de la consulta.
 
 ⸻
 
