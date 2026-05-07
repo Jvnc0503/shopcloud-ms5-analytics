@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from app.athena_service import run_query
 from app.queries import *
 
-router = APIRouter()
+router = APIRouter(prefix="/analytics", tags=["analytics"])
 
 @router.get("/ventas-por-categoria")
 def ventas_categoria():

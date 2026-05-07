@@ -10,4 +10,4 @@ def health_check():
         "service": "ms5-analytics"
     }
 
-app.include_router(analytics_router, prefix="/analytics")
+app.include_router(analytics_router)
